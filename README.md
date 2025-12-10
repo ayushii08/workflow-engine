@@ -1,6 +1,6 @@
-# Workflow Engine (AI Engineering Assignment)
+# Workflow Engine
 
-FastAPI-based workflow/graph engine that executes async tool nodes with shared state, conditional edges, and loop support. Includes a sample Data Quality pipeline (assignment Option C).
+FastAPI-based workflow/graph engine that executes async tool nodes with shared state, conditional edges, and loop support. Includes a sample Data Quality pipeline.
 
 ## Features
 - Define graphs via API: nodes, edges, conditional edges, loop definitions, entry point.
@@ -26,7 +26,7 @@ python -m app.main
 - `GET /api/tools` – list registered tools.
 - WebSockets: `/ws/execute/{graph_id}` to execute with streaming logs, `/ws/monitor/{run_id}` to monitor an existing run.
 
-## Sample Data Quality workflow (Option C)
+## Data Quality workflow (Option C)
 The data-quality tools are registered at startup. A ready-to-post graph definition lives in `app/workflows/data_quality.py` (`get_data_quality_graph_definition`). The included `test_pipeline.py` client script demonstrates the full flow:
 ```bash
 python test_pipeline.py
